@@ -1,5 +1,5 @@
 # The Hard & the Soft: An Engineer’s Field Guide to Software Metaphors
-*A dryly humorous, pragmatic handbook for understanding the physical roots and digital realities of engineering vernacular.*
+*Where physical engineering meets digital reality, with commentary.*
 
 ---
 
@@ -7,7 +7,7 @@
 
 ### Scaffolding  
 **Hard:** Temporary steel frames used so construction workers don’t plummet into lawsuits.  
-**Soft:** The automatically generated code that gives your project just enough structure to stop developers from building a second framework “because it felt cleaner.”
+**Soft:** The automatically generated code that gives your project just enough structure to stop developers from reinventing the wheel "because Redux was too mainstream."
 
 ### Boilerplate  
 **Hard:** Identical metal plates cranked out by Victorian-era machines.  
@@ -21,9 +21,21 @@
 **Hard:** Joints intentionally placed so materials can flex without shattering.  
 **Soft:** Strategic fault lines that let you change code without rewriting half the company’s infrastructure.
 
-### Rot (Code Rot)  
-**Hard:** Oxidation and material decay over time.  
+### Rot (Code Rot)
+**Hard:** Oxidation and material decay over time.
 **Soft:** The slow erosion of context and clarity until your system resembles the ruins of a once-great civilization.
+
+### Shim
+**Hard:** A thin wedge filling gaps between misaligned parts.
+**Soft:** The compatibility layer you swore was temporary three years ago.
+
+### Tech Debt
+**Hard:** Deferred maintenance that compounds.
+**Soft:** Every shortcut that haunts you in the form of a 3AM page.
+
+### Spaghetti Code
+**Hard:** Tangled, intertwined mess.
+**Soft:** Code where changing one line requires understanding the entire universe.
 
 ---
 
@@ -53,9 +65,9 @@
 
 ## 🔥 3. Performance, Load & Failure Mechanics
 
-### Hot Path  
-**Hard:** A region of hardware under thermal stress.  
-**Soft:** The 5% of code responsible for 95% of performance issues.
+### Hot Path
+**Hard:** A region of hardware under thermal stress.
+**Soft:** The 5% of code executed 95% of the time—where milliseconds cost real money.
 
 ### Cold Path  
 **Hard:** Areas rarely heated.  
@@ -65,9 +77,21 @@
 **Hard:** The extent of damage from an explosion.  
 **Soft:** The number of teams alerted when your microservice reenacts a disaster movie.
 
-### Choke Point  
-**Hard:** A narrow channel where flow collapses.  
+### Choke Point
+**Hard:** A narrow channel where flow collapses.
 **Soft:** That one service that tops out at 17 requests per second but somehow handles payroll.
+
+### Circuit Breaker
+**Hard:** An automatic switch that stops current during overload.
+**Soft:** The panic button that stops calling a failing service before your entire system joins the funeral.
+
+### Throttling
+**Hard:** Restricting flow through a valve.
+**Soft:** Rate limiting disguised as "protecting system health" when really you underprovisioned.
+
+### Cache Warming
+**Hard:** Preheating systems before operation.
+**Soft:** Frantically loading data before users notice everything is slow.
 
 ---
 
@@ -101,21 +125,29 @@
 **Hard:** A small bird detecting toxic gases by dying heroically.  
 **Soft:** The first instance deployed to production—fully prepared to perish for system stability.
 
-### Harness  
-**Hard:** A rig preventing catastrophic falls.  
+### Harness
+**Hard:** A rig preventing catastrophic falls.
 **Soft:** The padded room where you experiment on code without taking down production.
+
+### Idempotency
+**Hard:** Operations that produce the same result when repeated.
+**Soft:** The property that lets you mash "submit" during network hiccups without ordering 47 pizzas.
+
+### Graceful Degradation
+**Hard:** Systems that fail partially instead of catastrophically.
+**Soft:** When your service stops returning data but still returns 200 OK.
 
 ---
 
 ## 🛠️ 6. Human Factors & Interface Hazards
 
-### Footgun  
-**Hard:** A gun easy to accidentally fire at yourself.  
-**Soft:** An API designed with enough optimism to assume humans read documentation.
+### Footgun
+**Hard:** A gun easy to accidentally fire at yourself.
+**Soft:** An API designed with touching faith that developers read documentation before `rm -rf /`.
 
-### Sharp Edges  
-**Hard:** Corners that cut you.  
-**Soft:** The places where small mistakes become major outages.
+### Sharp Edges
+**Hard:** Corners that cut you.
+**Soft:** API design choices that turn typos into production incidents.
 
 ### Paper Cuts  
 **Hard:** Tiny injuries with outsized annoyance.  
@@ -149,6 +181,10 @@
 **Hard:** Applying excessive force to a delicate object.  
 **Soft:** Proposing a rewrite because two functions have similar names.
 
-### Duct Tape / Chewing Gum Fix  
-**Hard:** A temporary patch used in emergencies.  
-**Soft:** A fix that becomes permanent the moment someone writes, “Good enough for now.”
+### Duct Tape / Chewing Gum Fix
+**Hard:** A temporary patch used in emergencies.
+**Soft:** A fix that becomes permanent the moment someone writes, "Good enough for now."
+
+### Bus Factor
+**Hard:** Number of people a bus must hit to halt a project.
+**Soft:** How many engineers can quit before nobody knows how authentication works.
